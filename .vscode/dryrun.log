@@ -1,0 +1,8 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/justin/antlrExpr'
+echo compiling src..
+g++ -c -I /usr/local/include/antlr4-runtime/ parser.cpp -o ./obj/parser.o -std=c++17
+g++ -c -I /usr/local/include/antlr4-runtime/ ./ExprLexer.cpp -o ./obj/ExprLexer.o -std=c++17
+g++ -g ./obj/parser.o ./obj/ExprLexer.o /usr/local/lib/libantlr4-runtime.a -o parser -std=c++17	
+make: Leaving directory '/home/justin/antlrExpr'
+ 
